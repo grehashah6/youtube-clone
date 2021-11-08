@@ -1,0 +1,24 @@
+.sidebar_items:hover{
+    background-color: rgb(230, 230, 230) !important;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+.sidebar_items{
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.sidebar_items span i.icon{
+    margin-right: 20px;
+}
+
+.sidebar_items span i.icon:hover{
+    background-color: red;
+    border-radius: 50%;
+}
+
+a{
+    color: black;
+}
