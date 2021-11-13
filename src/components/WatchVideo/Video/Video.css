@@ -1,0 +1,25 @@
+.video_container {
+	position: relative;
+	width: 95%;
+}
+
+.video_container::before {
+	content: "";
+	display: block;
+	padding-top: 55%;
+}
+
+.video {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.video_player {
+	min-height: 500px;
+	width: 100%;
+	height: 100%;
+	margin-left: 300px !important;
+}

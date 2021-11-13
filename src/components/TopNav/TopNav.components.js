@@ -5,10 +5,13 @@ import Search from "../Search/Search.component";
 import { Link, withRouter } from "react-router-dom";
 import { getParamValue } from "../../utils/uri";
 import "./TopNav.css";
+import FunctionContext from "./FunctionContext";
 
 export const params = {
 	search_query: String,
 };
+
+export const ThemeContext = React.createContext();
 
 const TopNav = (props) => {
 	const [searchInputState, setSearchInputState] = useState(
@@ -19,6 +22,12 @@ const TopNav = (props) => {
 		let value = event.currentTarget.value;
 		setSearchInputState(() => value);
 	};
+
+	const [darkTheme, setDarkTheme] = useState(true);
+
+	function toggleTheme() {
+		setDarkTheme((prevDarkTheme) => !prevDarkTheme);
+	}
 
 	const onSubmit = (event) => {
 		const encodeUri = encodeURI(searchInputState);
@@ -51,8 +60,12 @@ const TopNav = (props) => {
 			</Menu.Menu>
 			<Menu.Menu>
 				<Item>
-					<Icon className="menu_icon" name="video camera" size="large" />{" "}
+					<ThemeContext.Provider value={darkTheme}>
+						<button onClick={toggleTheme}>Change Theme </button>
+						<FunctionContext />
+					</ThemeContext.Provider>
 				</Item>
+
 				<Item>
 					<Icon className="menu_icon" name="grid layout" size="large" />{" "}
 				</Item>

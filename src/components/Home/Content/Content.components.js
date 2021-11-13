@@ -18,7 +18,7 @@ const Content = (props) => {
 
 	const [categoryIndex, setCategoryIndex] = useState(0);
 
-	if (categoryIndex == 0 && props.categories.length > 0) {
+	if (categoryIndex === 0 && props.categories.length > 0) {
 		props.LoadVideosByCategories([props.categories[categoryIndex]]);
 		setCategoryIndex((currentIndex) => (currentIndex += 1));
 	}

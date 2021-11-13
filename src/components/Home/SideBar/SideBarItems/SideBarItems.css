@@ -19,6 +19,51 @@
     border-radius: 50%;
 }
 
+.for_you{
+   
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
 a{
     color: black;
+}
+
+.animation {
+	position: relative;
+	animation: move-text-color 3.0s forwards;
+	bottom: -3em;
+	opacity: 0;
+}
+
+@keyframes move-text-color {
+	0% {
+		bottom: -0.2em;
+		opacity: 1;
+		color: #3E5C76;
+	}
+
+    25% {
+		bottom: -0.2em;
+		opacity: 1;
+		color: #3e7643;
+	}
+	
+	50% {
+		bottom: 0.2em;
+		color: #EC058E;
+	}
+
+    75% {
+		bottom: -0.2em;
+		opacity: 1;
+		color: #acb932;
+	}
+
+	100% {
+		bottom: 0;
+		opacity: 1;
+    color: #110e0e;
+	}
+    
 }

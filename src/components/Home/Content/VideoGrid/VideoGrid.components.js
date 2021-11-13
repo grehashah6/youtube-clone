@@ -5,7 +5,6 @@ import { VideoGridHeader } from "./VideoGridHeader/VideoGridHeader";
 import { Divider } from "semantic-ui-react";
 
 export const VideoGrid = (props) => {
-	
 	console.log(props);
 
 	let previews = props.videos.map((video) => (
@@ -13,9 +12,11 @@ export const VideoGrid = (props) => {
 	));
 	return (
 		<>
-			<VideoGridHeader title={props.title}/>
-			<div className="video_grid">{previews}</div>
-			<Divider />
+			<div className="content_body">
+				<VideoGridHeader title={props.title} />
+				<div className="video_grid">{previews}</div>
+				<Divider />
+			</div>
 		</>
 	);
 };

@@ -1,9 +1,10 @@
-.video_grid_header{
-    padding-bottom: 22px;
-    padding-top: 15px;
+.video_grid_header {
+	padding-bottom: 22px;
+	padding-top: 15px;
 }
 
-.video_title{
-    font-size: 1.2rem;
-    font-weight: bolder;
+.video_title {
+	font-size: 1.2rem;
+	font-weight: bolder;
+	overflow: overlay;
 }

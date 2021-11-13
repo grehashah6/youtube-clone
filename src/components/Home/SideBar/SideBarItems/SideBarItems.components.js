@@ -29,19 +29,51 @@ export const SideBarItems = () => {
 				<span>Subscriptions</span>
 			</div>
 			<Divider />
-			<div className="sidebar_items">
-				<span>
-					<Icon size="large" name="video play" />
-				</span>
-				<span>Library</span>
+			<div>
+				<div className="for_you">
+					<span className="animation">More From YouTube </span>
+				</div>
+				<Link to="/result?search_query=songs">
+					<div className="sidebar_items">
+						<span>
+							<Icon size="large" name="music" />
+						</span>
+						<span>Music</span>
+					</div>
+				</Link>
+				<Link to="/result?search_query=movies">
+					<div className="sidebar_items">
+						<span>
+							<Icon size="large" name="film" />
+						</span>
+						<span>Movies</span>
+					</div>
+				</Link>
+				<Link to="/result?search_query=india%20news">
+					<div className="sidebar_items">
+						<span>
+							<Icon size="large" name="newspaper" />
+						</span>
+						<span>News</span>
+					</div>
+				</Link>
+				<Link to="/result?search_query=gaming%20videos">
+					<div className="sidebar_items">
+						<span>
+							<Icon size="large" name="game" />
+						</span>
+						<span>Gaming</span>
+					</div>
+				</Link>
+				<Link to="/result?search_query=sports">
+					<div className="sidebar_items">
+						<span>
+							<Icon size="large" name="trophy" />
+						</span>
+						<span>Sports</span>
+					</div>
+				</Link>
 			</div>
-			<div className="sidebar_items">
-				<span>
-					<Icon size="large" name="history" />
-				</span>
-				<span>History</span>
-			</div>
-			<Divider />
 		</Item>
 	);
 };

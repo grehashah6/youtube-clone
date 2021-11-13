@@ -1,5 +1,3 @@
-import { Location } from 'history';
-
 
 export const getParamValue =(location, paramname) => {
     if(!location || !location.search){
